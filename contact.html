@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from poprey.com/contact.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Apr 2018 22:11:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+	 <meta charset="UTF-8">
+     <title>Contact</title>
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0, maximum-scale=1" />
+     <meta name="format-detection" content="telephone=no">
+
+</head>
+<body>
+     
+   <link media="all" rel="stylesheet" type="text/css" href="tmpl/css/styles.css" />
+   
+   <div class="total-container">
+
+       
+        <!-- .header -->
+        <header class="header">
+             
+             <div class="cont">
+            
+             <a class="logo" href="index-2.html">Poprey</a>
+                  
+                  <ul class="menu">
+                       <li><a href="referral.html">Referral program</a></li>
+                       <li><a href="faq.html">FAQ</a></li>
+                       <li class="active"><a href="contact.html">Contact</a></li>
+                       <li><a href="rules.html">Terms of service</a></li>
+                  </ul>
+             
+             </div>
+             
+        </header>
+        <!-- END .header -->
+        
+        
+        
+        
+        <!-- .contact -->
+        <div class="contact">
+            
+             <div class="cont">
+             
+                  <div class="contact-block">
+                  
+                       <div class="title"><h2>Contact</h2></div>
+                       
+                       <div class="contact-informer">
+                            
+                            
+        <div class="contact-informer__box color-green"><span>The issue with redirecting to main page is fixed :) Sorry for inconvenience</span></div>
+                                
+                       </div>
+                       
+                       <form class="form" id="form" onsubmit="send_form(); return false;">
+                           
+                            <div class="contact-cont">
+                                 <div class="contact-cont__box"><input class="inputBox" type="email" id="email" placeholder="Order Email" required/></div>
+                                 <div class="contact-cont__box"><textarea class="textareaBox" id="text" placeholder="Your question" required></textarea></div>
+                                 <div class="contact-cont__box"><input class="button button--grayBig" type="submit" value="Submit" /></div>
+                            </div>
+                       
+                       </form>
+
+                       <div class="contact-sent" style="display: none;">
+                       
+                       </div>
+                       
+                       <div class="contact-buttBox">
+
+                            <a class="button button--bigGo" href="index-2.html">Go Home</a>
+
+                       </div>
+                  
+                  </div>
+
+             </div>
+             
+        </div>
+        <!-- END .contact -->
+        
+
+       
+
+   </div>
+
+     
+
+     
+   <script type="text/javascript" src="tmpl/js/libs.min.js"></script>
+   <script type="text/javascript" src="tmpl/js/main.js"></script>
+
+   <script>
+        function  send_form()
+        {
+            $.post('contact.html', {email: $('#email').val(), text: $('#text').val()}, function (data) {
+                res = $.parseJSON(data);
+                if (res.result == 'Ok')
+                {
+                    $('#form').hide();
+                    $('.contact-sent').show();
+                }
+                else
+                {
+                    alert(res.text);
+                }
+            });
+        }
+
+   </script>
+   
+
+</body>
+
+<!-- Mirrored from poprey.com/contact.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Apr 2018 22:11:15 GMT -->
+</html>
+     
+     
+     
+     
+     
+     
+     
+     
+     
